@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torrevieja Vapes Market</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>T. Vapes Market</h1>
+    <p class="instagram-link">
+      Contact me on Instagram <a href="https://instagram.com/fxture77" target="_blank">@fxture77</a>
+    </p>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('sweet')">Sweet</button>
+    <button class="tab-button" onclick="showTab('fruity')">Fruity</button>
+  </div>
+
+  <!-- Vape Product Sections -->
+  <main class="product-grid">
+
+    <!-- Sweet -->
+    <div class="tab-content" id="sweet">
+      <div class="product-card sweet low-nic">
+        <img src="images/vape3.jpg" alt="Raspberry Ice Cream" />
+        <h2>Raspberry Ice Cream</h2>
+        <p class="nicotine">Nicotine: 3%</p>
+        <p class="description">Smooth raspberry ice cream flavour | gives high effect if inhaled | best for starters</p>
+        <p class="stock">In Stock: 3</p>
+        <p class="price">$19.99</p>
+      </div>
+    </div>
+
+    <!-- Fruity -->
+    <div class="tab-content" id="fruity">
+      <div class="product-card fruity low-nic">
+        <img src="images/vape1.jpg" alt="Fruit Rush" />
+        <h2>Tropical</h2>
+        <p class="nicotine">Nicotine: 3%</p>
+        <p class="description">2 Vape Flavours (Mixed Fruit & Triple Berry</p>
+        <p class="price">$16.99</p>
+      </div>
+
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 T. Vapes Market. Chill responsibly.</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+      document.getElementById(tabId).style.display = 'grid';
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Show "sweet" tab by default
+    window.onload = () => {
+      showTab('sweet');
+    };
+  </script>
+</body>
+</html>
